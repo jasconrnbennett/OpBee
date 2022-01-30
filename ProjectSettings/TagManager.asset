@@ -11,6 +11,9 @@ TagManager:
   - Fan
   - Hive
   - Frog
+  - PlayButton
+  - Candle
+  - Flower
   layers:
   - Default
   - TransparentFX
