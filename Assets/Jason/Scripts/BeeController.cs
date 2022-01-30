@@ -19,6 +19,18 @@ public class BeeController : MonoBehaviour
         rb2D.isKinematic = true;
     }
 
+    private void FixedUpdate()
+    {
+        if(rb2D.velocity.x >= 0)
+        {
+            transform.localScale = new Vector3(1, 1, 1);
+        }
+        else if(rb2D.velocity.x < 0)
+        {
+            transform.localScale = new Vector3(-1, 1, 1);
+        }
+    }
+
     //private void Update()
     //{
     //    if (Input.GetKeyDown(KeyCode.Space))
