@@ -140,6 +140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   circle: {fileID: 8124464152518621647}
+  anim: {fileID: 4713001979929751580}
   effectorCollider: {fileID: 7696114380757510296}
   isActive: 0
 --- !u!61 &8740020593208191590
@@ -282,7 +283,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7007886301568680562, guid: dc845f5f180a9c547b6a634467aade40, type: 3}
       propertyPath: m_Name
-      value: Pull_Anim
+      value: Anim
+      objectReference: {fileID: 0}
+    - target: {fileID: 7007886301568680562, guid: dc845f5f180a9c547b6a634467aade40, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7007886301568680567, guid: dc845f5f180a9c547b6a634467aade40, type: 3}
       propertyPath: m_RootOrder
@@ -345,5 +350,10 @@ PrefabInstance:
 --- !u!4 &4713001979929751577 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7007886301568680567, guid: dc845f5f180a9c547b6a634467aade40, type: 3}
+  m_PrefabInstance: {fileID: 2316804189751030382}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4713001979929751580 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7007886301568680562, guid: dc845f5f180a9c547b6a634467aade40, type: 3}
   m_PrefabInstance: {fileID: 2316804189751030382}
   m_PrefabAsset: {fileID: 0}
