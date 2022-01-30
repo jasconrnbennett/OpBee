@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 345176277}
   m_Layer: 0
   m_Name: UI_Play
-  m_TagString: Untagged
+  m_TagString: PlayButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -241,6 +241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e3c527b44acf7948b8780debea9bfac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doNotClick: 0
 --- !u!1 &6993578504049648090
 GameObject:
   m_ObjectHideFlags: 0
