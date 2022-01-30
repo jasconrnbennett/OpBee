@@ -27,7 +27,8 @@ public class PocketController : MonoBehaviour
 
         Instantiate(itemType, this.transform.position, Quaternion.identity);
         itemType.transform.Find("Circle").gameObject.SetActive(false);
-        itemType.GetComponent<CircleCollider2D>().enabled = false;
+        itemType.transform.Find("Anim").gameObject.SetActive(false);
+        itemType.GetComponent<CircleCollider2D>().enabled = false; 
     }
 
     private void OnTriggerExit2D(Collider2D collision)

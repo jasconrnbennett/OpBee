@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6755165905791856004
 Transform:
   m_ObjectHideFlags: 0
@@ -208,6 +208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   circle: {fileID: 651965134212207160}
+  anim: {fileID: 8829842603122342159}
   effectorCollider: {fileID: 4082063687270457245}
   isActive: 0
 --- !u!61 &2923810421984932107
@@ -5174,7 +5175,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 511387566737654937, guid: cb4108102d2c4814b84d2db37e938a9c, type: 3}
       propertyPath: m_Name
-      value: Slow_Anim
+      value: Anim
+      objectReference: {fileID: 0}
+    - target: {fileID: 511387566737654937, guid: cb4108102d2c4814b84d2db37e938a9c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 568851064954145907, guid: cb4108102d2c4814b84d2db37e938a9c, type: 3}
       propertyPath: m_RootOrder
@@ -5237,5 +5242,10 @@ PrefabInstance:
 --- !u!4 &8824170560984805861 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 568851064954145907, guid: cb4108102d2c4814b84d2db37e938a9c, type: 3}
+  m_PrefabInstance: {fileID: 9048073981558832534}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8829842603122342159 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 511387566737654937, guid: cb4108102d2c4814b84d2db37e938a9c, type: 3}
   m_PrefabInstance: {fileID: 9048073981558832534}
   m_PrefabAsset: {fileID: 0}

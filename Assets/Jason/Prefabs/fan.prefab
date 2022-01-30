@@ -168,6 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   circle: {fileID: 3666792484150860917}
+  anim: {fileID: 7283401955572692237}
   effectorCollider: {fileID: 3631017273532669972}
   isActive: 0
 --- !u!82 &2370818813631566398
@@ -375,7 +376,11 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 5e14f5b4df0e2b74fa1af59f42dda56a, type: 3}
     - target: {fileID: 7715711146612706948, guid: 1a763a71995ef914098cdcc9c73604c9, type: 3}
       propertyPath: m_Name
-      value: Fast_Anim
+      value: Anim
+      objectReference: {fileID: 0}
+    - target: {fileID: 7715711146612706948, guid: 1a763a71995ef914098cdcc9c73604c9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7777594679425336942, guid: 1a763a71995ef914098cdcc9c73604c9, type: 3}
       propertyPath: m_RootOrder
@@ -435,6 +440,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a763a71995ef914098cdcc9c73604c9, type: 3}
+--- !u!1 &7283401955572692237 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7715711146612706948, guid: 1a763a71995ef914098cdcc9c73604c9, type: 3}
+  m_PrefabInstance: {fileID: 1008913062793902985}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7345353617069145575 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7777594679425336942, guid: 1a763a71995ef914098cdcc9c73604c9, type: 3}

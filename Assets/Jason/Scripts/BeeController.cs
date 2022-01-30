@@ -31,14 +31,14 @@ public class BeeController : MonoBehaviour
         }
     }
 
-    //private void Update()
-    //{
-    //    if (Input.GetKeyDown(KeyCode.Space))
-    //    {
-    //        Debug.Log("Scene Count = " + SceneManager.sceneCountInBuildSettings);
-    //        Debug.Log("Current scene = " + SceneManager.GetActiveScene().buildIndex);
-    //    }
-    //}
+    private void Update()
+    {
+        if (Input.GetKey(KeyCode.N))
+        {
+            if(Input.GetKeyDown(KeyCode.L))
+                StartCoroutine(NextLevelTimer());
+        }
+    }
 
     public void StartBee()
     {

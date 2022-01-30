@@ -9,6 +9,7 @@ public class DragObject : MonoBehaviour
     private Vector3 offset;
     private bool IsDetectingCollision = false;
     public GameObject circle;
+    public GameObject anim;
     public Collider2D effectorCollider;
     public bool isActive = false;
 
@@ -81,6 +82,7 @@ public class DragObject : MonoBehaviour
         {
             //isActive = true;
             circle.SetActive(true);
+            anim.SetActive(true);
             effectorCollider.enabled = true;
         }
     }
