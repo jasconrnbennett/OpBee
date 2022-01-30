@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class PlayButton : MonoBehaviour
 {
-
-    //public float beeStartingSpeed = 100;
+    [HideInInspector]
+    public bool doNotClick = false;
 
     private void OnMouseUpAsButton()
     {
         GameObject.FindGameObjectWithTag("Bee").GetComponent<BeeController>().StartBee();
         GetComponent<BoxCollider2D>().enabled = false;
+        doNotClick = true;
     }
 }

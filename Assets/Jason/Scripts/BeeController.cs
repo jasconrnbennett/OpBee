@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class BeeController : MonoBehaviour
@@ -8,7 +9,8 @@ public class BeeController : MonoBehaviour
 
     private Rigidbody2D rb2D;
     public float force = 100;
-    public TextMeshProUGUI winLose;
+    public TMP_Text winLose;
+    public TMP_Text message;
 
     void Start()
     {
@@ -17,8 +19,18 @@ public class BeeController : MonoBehaviour
         rb2D.isKinematic = true;
     }
 
+    //private void Update()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.Space))
+    //    {
+    //        Debug.Log("Scene Count = " + SceneManager.sceneCountInBuildSettings);
+    //        Debug.Log("Current scene = " + SceneManager.GetActiveScene().buildIndex);
+    //    }
+    //}
+
     public void StartBee()
     {
+        GetComponent<CircleCollider2D>().enabled = true;
         rb2D.isKinematic = false;
         rb2D.AddForce(transform.right * force);
     }
@@ -33,6 +45,19 @@ public class BeeController : MonoBehaviour
     {
         Debug.Log("FastBee");
         rb2D.velocity = rb2D.velocity * 1.2f;
+    }
+
+    IEnumerator NextLevelTimer()
+    {
+        yield return new WaitForSecondsRealtime(3);
+        if(SceneManager.sceneCountInBuildSettings -1 == SceneManager.GetActiveScene().buildIndex)
+        {
+            SceneManager.LoadScene(0);
+        }
+        else
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -53,13 +78,15 @@ public class BeeController : MonoBehaviour
             Debug.Log("You win!");
             winLose.enabled = true;
             winLose.text = "You Win";
+            message.text = "Bee made it home!";
             rb2D.velocity = rb2D.velocity - rb2D.velocity;
+            StartCoroutine(NextLevelTimer());
         }
 
         if(collision.tag == "Frog")
         {
-            winLose.enabled = true;
             winLose.text = "You Lose";
+            message.text = "Bee didn't make it...";
             rb2D.velocity = rb2D.velocity - rb2D.velocity;
         }
     }

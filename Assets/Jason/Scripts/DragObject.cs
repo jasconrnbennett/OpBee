@@ -14,6 +14,8 @@ public class DragObject : MonoBehaviour
 
     void OnMouseDown()
     {
+        if (GameObject.FindGameObjectWithTag("PlayButton").GetComponent<PlayButton>().doNotClick == true) return;
+
         screenPoint = Camera.main.WorldToScreenPoint(gameObject.transform.position);
 
         offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
@@ -22,6 +24,8 @@ public class DragObject : MonoBehaviour
 
     void OnMouseDrag()
     {
+        if (GameObject.FindGameObjectWithTag("PlayButton").GetComponent<PlayButton>().doNotClick == true) return;
+
         Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
 
         Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint) + offset;
