@@ -85,6 +85,7 @@ public class BeeController : MonoBehaviour
 
         if(collision.tag == "Frog")
         {
+            winLose.enabled = true;
             winLose.text = "You Lose";
             message.text = "Bee didn't make it...";
             rb2D.velocity = rb2D.velocity - rb2D.velocity;
