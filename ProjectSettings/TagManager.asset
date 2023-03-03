@@ -3,17 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Bee
-  - Effector
-  - Smoke
-  - Pocket
-  - Fan
-  - Hive
-  - Frog
-  - PlayButton
-  - Candle
-  - Flower
+  tags: []
   layers:
   - Default
   - TransparentFX
